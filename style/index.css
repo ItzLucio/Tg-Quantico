@@ -137,14 +137,15 @@ main {
 }
 
 .first .video .name {
+	max-width: 65%;
 	font-weight: 600;
-	font-size: 1.8rem;
+	font-size: 1.6rem;
 }
 
 .first .video video {
 	margin: 0;
-	height: 80%;
-	width: auto;
+	height: auto;
+	max-width: 50%;
 }
 
 @keyframes live {
@@ -332,4 +333,30 @@ footer .content span {
 
 footer .content span i {
 	color: #4c4c58;
+}
+
+@media screen and (width < 1400px) {
+	.video {
+		flex-direction: column !important;
+	}
+
+	.video .info {
+		width: 100% !important;
+		height: 30%;
+	}
+
+	.texts {
+		width: 100%;
+	}
+
+	.video .name {
+		font-size: 1.2rem !important;
+		max-width: 100% !important;
+	}
+
+	.video video {
+		max-width: none !important;
+		width: auto !important;
+		height: 50% !important;
+	}
 }
